@@ -90,6 +90,8 @@ namespace OPC_HDA_Client
             group.ResampleInterval = (decimal)calcinterval;
             group.AggregateID = Opc.Hda.AggregateID.DURATIONGOOD;
             group.MaxValues = maxValues;
+            group.IncludeBounds = includeBounds;
+            
             ItemValueCollection[] values = group.ReadRaw();
 
             foreach (ItemValueCollection itemValueCollection in values)
