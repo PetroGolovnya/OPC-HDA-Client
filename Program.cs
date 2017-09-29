@@ -19,8 +19,10 @@ namespace OPC_HDA_Client
             hdac.AddItem("Random.Int1");
 
             // Read raw data
-            DateTime start = DateTime.Now;
-            DateTime end = start.AddDays(1);
+            //DateTime start = DateTime.Now;
+            //DateTime end = start.AddDays(1);
+            DateTime start = DateTime.Now.AddDays(-1); 
+            DateTime end = DateTime.Now;
             DataTable dt = hdac.ReadRaw(start, end, 32, true);
 
             foreach (DataRow dr in dt.Rows)
